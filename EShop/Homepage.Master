@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Homepage.master.cs" Inherits="EShop.Homepage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 339px;
+        }
+
+        .auto-style2 {
+            width: 795px;
+        }
+
+        .auto-style3 {
+            width: 82px;
+            height: 57px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td rowspan="3" class="auto-style1">
+                        <br />
+                    </td>
+                    <td align="center" class="auto-style2">
+                        <div>
+                            <img alt="" class="auto-style3" src="Images/logo.png" /><asp:HyperLink ID="HomeLink" runat="server" Width="57px" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                            <asp:HyperLink ID="ProductLink" runat="server" Width="66px" NavigateUrl="~/GuestProducts.aspx">Product</asp:HyperLink>
+                            <asp:HyperLink ID="RegisterLink" runat="server" Width="80px" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                            <asp:HyperLink ID="LoginLink" runat="server" Width="41px" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                            <asp:HyperLink ID="FeedbackLink" runat="server" Width="93px" NavigateUrl="~/Feedback.aspx">Feedback</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server">About</asp:HyperLink>
+                        </div>
+                        <br />
+                        <div>
+                            &nbsp;<asp:Label ID="Label1" runat="server"></asp:Label>
+                            <asp:Label ID="Label2" runat="server"></asp:Label>
+                        </div>
+                        <br />
+                        <div>
+                            <asp:Label ID="LabelStatus" runat="server" ForeColor="#FF6600"></asp:Label>
+                        </div>
+                    </td>
+                    <td rowspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="center">
+                        <div align="center">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

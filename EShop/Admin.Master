@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="EShop.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+
+        .auto-style2 {
+            width: 82px;
+            height: 57px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td rowspan="3">&nbsp;</td>
+                    <td class="auto-style1" align="center">
+                        <div>
+                            <img alt="" class="auto-style2" src="Images/logo.png" /><asp:HyperLink ID="ManageProdLink" runat="server" NavigateUrl="~/ManageProduct.aspx" Width="116px">Manage Products</asp:HyperLink>
+                            <asp:HyperLink ID="ViewAdminLink" runat="server" Width="106px" NavigateUrl="~/ViewAdmin.aspx">View Accounts</asp:HyperLink>
+                            <asp:HyperLink ID="ViewOrdersLink" runat="server" Width="89px" NavigateUrl="~/ViewOrdersPage.aspx">View Orders</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AddCouponCodePage.aspx" Width="112px">Discount Code</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/EmailPage.aspx" Width="82px">Send Code</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/WithdrawRequestPage.aspx" Width="124px">Withdraw request</asp:HyperLink>
+                            <asp:LinkButton ID="LinkButtonLogout" runat="server" OnClick="LinkButtonLogout_Click" Width="70px" CausesValidation="False">Logout</asp:LinkButton>
+
+                        </div>
+                        <br />
+                        <div>
+                            &nbsp;<asp:Label ID="Label1" runat="server"></asp:Label>
+                            <asp:Label ID="Label2" runat="server"></asp:Label>
+                        </div>
+                        <br />
+                        <div>
+                            <asp:Label ID="LabelStatus" runat="server" ForeColor="#FF6600"></asp:Label>
+                        </div>
+                    </td>
+                    <td rowspan="3" align="center"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

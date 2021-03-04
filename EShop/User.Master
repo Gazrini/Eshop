@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="EShop.User" %>
+
+<%@ Register Src="UserControls/LoginStatus.ascx" TagName="LoginStatus" TagPrefix="uc3" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 339px;
+        }
+
+        .auto-style2 {
+            width: 795px;
+        }
+
+        .auto-style3 {
+            width: 82px;
+            height: 57px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td rowspan="3" class="auto-style1">
+                        <br />
+                    </td>
+                    <td align="center" class="auto-style2">
+                        <div>
+                            <img alt="" class="auto-style3" src="Images/logo.png" /><asp:HyperLink ID="HyperLink1" runat="server" Width="54px" NavigateUrl="~/CustomerHomepage.aspx">Home</asp:HyperLink>
+                            <asp:HyperLink ID="CustomerProductLink" runat="server" Width="74px" NavigateUrl="~/CustomerProducts.aspx">Product</asp:HyperLink>
+                            <asp:HyperLink ID="UpdateDetailsLink" runat="server" Width="100px" NavigateUrl="~/UpdateDetails.aspx">Update Details</asp:HyperLink>
+                            <asp:HyperLink ID="EwalletLink" runat="server" Width="78px" NavigateUrl="~/EwalletPage.aspx">E-Wallet</asp:HyperLink>
+                            <asp:HyperLink ID="CartLink" runat="server" Width="30px" NavigateUrl="~/AddToCart.aspx">Cart</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ViewWishlist.aspx" Width="79px">Wishlist</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/CustomersOrders.aspx">Orders</asp:HyperLink>
+                            <asp:LinkButton ID="LinkButtonLogout" runat="server" OnClick="LinkButtonLogout_Click" Width="80px" CausesValidation="False">Logout</asp:LinkButton>
+                        </div>
+                        <br />
+                        <div>
+                            &nbsp;<asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Visible="False"></asp:Label>
+                            <b>Balance in E-wallet: RM<asp:Label ID="Label3" runat="server"></asp:Label></b>
+                        </div>
+                        <br />
+                        <div>
+                            <asp:Label ID="LabelStatus" runat="server" ForeColor="#FF6600"></asp:Label>
+                        </div>
+                    </td>
+                    <td rowspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" align="center">
+                        <div align="center">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
